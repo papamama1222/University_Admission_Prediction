@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <img class="df" src="{{url_for('static',filename='img1.png')}}">
+    
+</head>
+<style>
+    body{
+        background-color: rgb(214, 214, 214);
+    }
+    .df{
+            width: 1330px;
+        }
+    header{
+            background-color: rgb(255, 94, 0);
+            position: relative;
+            height: 50px;
+            
+        }
+        .yu{
+            float: right;
+            margin-top: -58px;
+            padding-top: 15px;
+            padding-right: 20px;
+            background-color: rgb(255, 94, 0);
+            height: 34px;
+        }
+        .a{
+            padding-right: 20px;
+            text-decoration: none;
+            color: black;
+            font-weight: bolder;
+        }
+        .foot{
+  position: relative;
+  margin-top: 30px;
+  float: left;
+  height: 300px;
+  background-color: black;
+  width: 100%;
+  color: white;
+}
+li{
+  float: left;
+  margin-left: 130px;
+  font-size: 20px;
+  list-style: none;
+}
+h4{
+  font-size: 30px;
+  text-decoration: underline;
+  
+}
+.footere{
+ 
+  margin-top: 282px;
+  
+}
+.footer{
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  background-color: black;
+  width: 1333px;
+}
+.scrolling-text{
+  background-color: black;
+  height: 30px;
+  cursor: not-allowed;
+}
+#zx{
+  text-decoration: none;
+  color: papayawhip;
+  font-weight: 600;
+  margin-left: 200px;
+}
+.ok{
+    background-color: white;
+    border: 2px solid black;
+    width: 50%;
+    margin-left: 340px;
+    position: relative;
+  overflow: hidden;
+  height: 500px;
+  border-radius: 20px;
+  
+}
+.cv{
+    text-align: center;
+    background-color: yellow;
+}
+.ax{
+    margin-left: 120px;
+    position: absolute;
+  top: -100%;
+  padding-top: 150px;
+  width: 400px;
+  animation: slide-in 0.5s ease-out forwards;
+}
+.ax:hover{
+    transform: scale(1.1);
+}
+@keyframes slide-in {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.bv{
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    margin-top: 400px;
+    
+}
+</style>
+<body>
+    <header>
+        
+        <h1>WELLCOME to , AR UNIVERSITY .... !!</h1>
+        <ul class="yu">
+        <a href="{{url_for('home')}}" id="z" class="a">HOME</a>
+        <a href="b.html" class="a">CONTACT US</a>
+        <a href="c.html" class="a">EMAIL</a>
+        </ul>
+    
+</header>
+<marquee  onmouseover="this.stop();" onmouseout="this.start();" class="scrolling-text">
+  <a href="a.html" id="zx">Best Offers</a>
+  <a href="a.html" id="zx">Results</a>
+  <a href="a.html" id="zx">Fees</a>
+  <a href="a.html" id="zx">Course</a>
+</marquee>
+    <div class="ok">
+    <h1 class="cv">Admission Prediction</h1>
+    <img class="ax" src="{{url_for('static',filename='emo1.jpg')}}">
+    <p class="bv">{{prediction_text}}</p>
+</div>
+
+    <div class="foot">
+        <ul class="foo">
+          <li><h4>Address :</h4><br>Dubai Main Road , Kadayanallur ,<br> 627751 , <br>Tamil Nadu , India .</li>
+          <li><h4>EMAIL :</h4><br> ar1222universityinfo@mail.com</li>
+          <li><h4>Help - Toll Free :</h4><br> 1-8000-3002-8989 </li>
+        </ul>
+        </div>
+        <div class="footere">
+          <p class="footer">This website is maintained by Centre for Computing A.R University<br>
+            © AR University. 2023. All Rights Reserved.</p>
+          </div>
+      
+</body>
+</html>

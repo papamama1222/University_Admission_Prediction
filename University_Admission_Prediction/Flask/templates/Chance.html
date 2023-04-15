@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admission Chance Predictor</title>
+    <img src="{{url_for('static',filename='img1.png')}}">
+</head>
+<style>
+    img{
+            width: 1330px;
+        }
+    header{
+            background-color: rgb(255, 94, 0);
+            position: relative;
+            height: 50px;
+            
+        }
+        .yu{
+            float: right;
+            margin-top: -58px;
+            padding-top: 15px;
+            padding-right: 20px;
+            background-color: rgb(255, 94, 0);
+            height: 34px;
+        }
+        .a{
+            padding-right: 20px;
+            text-decoration: none;
+            color: black;
+            font-weight: bolder;
+        }
+        .foot{
+  position: relative;
+  margin-top: 30px;
+  float: left;
+  height: 300px;
+  background-color: black;
+  width: 100%;
+  color: white;
+}
+li{
+  float: left;
+  margin-left: 130px;
+  font-size: 20px;
+  list-style: none;
+}
+h4{
+  font-size: 30px;
+  text-decoration: underline;
+  
+}
+.footere{
+ 
+  margin-top: 282px;
+  
+}
+.footer{
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  background-color: black;
+  width: 1333px;
+}
+.scrolling-text{
+  background-color: black;
+  height: 30px;
+  cursor: not-allowed;
+}
+#zx{
+  text-decoration: none;
+  color: papayawhip;
+  font-weight: 600;
+  margin-left: 200px;
+}
+body{
+    background-color: wheat;
+}
+.qwe{
+    background-color: white;
+    height: 450px;
+    width: 50%;
+    margin-left: 340px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.poi{
+    text-align: center;
+    background-color: yellow;
+}
+.asd{
+    width: 350px;
+    height: 270px;
+    margin-top: 380px;
+    margin-left: 170px;
+    animation: slide-in 0.5s ease-out forwards;
+    position: absolute;
+    top: -100%;
+}
+.asd:hover{
+    transform: scale(1.1);
+}
+@keyframes slide-in {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+.ert{
+    margin-top: 340px;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-weight: bolder;
+    text-decoration: none;
+    text-transform: capitalize;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  animation: text-border 5s linear infinite;
+}
+@keyframes ert {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+.lkj{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+}
+</style>
+<body>
+    <header>
+        
+        <h1>WELLCOME to , AR UNIVERSITY .... !!</h1>
+        <ul class="yu">
+        <a href="{{url_for('home')}}" id="z" class="a">HOME</a>
+        <a href="b.html" class="a">CONTACT US</a>
+        <a href="c.html" class="a">EMAIL</a>
+        </ul>
+    
+</header>
+<marquee  onmouseover="this.stop();" onmouseout="this.start();" class="scrolling-text">
+  <a href="a.html" id="zx">Best Offers</a>
+  <a href="a.html" id="zx">Results</a>
+  <a href="a.html" id="zx">Fees</a>
+  <a href="a.html" id="zx">Course</a>
+</marquee>
+<div class="qwe">
+
+
+    <h1 class="poi">Admission Prediction</h1>
+    <img class="asd" src="{{url_for('static',filename='emo2.jpg')}}">
+    <p class="ert">{{ prediction_text }}</p>
+</div>
+    <p class="lkj">Unfortunately, based on the inputs you provided, our model predicts that you do not have a chance of getting admission to the university. We suggest that you work on improving your grades and test scores before applying again.</p>
+
+    <div class="foot">
+        <ul class="foo">
+          <li><h4>Address :</h4><br>Dubai Main Road , Kadayanallur ,<br> 627751 , <br>Tamil Nadu , India .</li>
+          <li><h4>EMAIL :</h4><br> ar1222universityinfo@mail.com</li>
+          <li><h4>Help - Toll Free :</h4><br> 1-8000-3002-8989 </li>
+        </ul>
+        </div>
+        <div class="footere">
+          <p class="footer">This website is maintained by Centre for Computing A.R University<br>
+            © AR University. 2023. All Rights Reserved.</p>
+          </div>
+      
+</body>
+</html>

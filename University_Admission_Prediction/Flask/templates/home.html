@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <img src="{{url_for('static',filename='img1.png')}}">
+    <style>
+      body{
+        background-color: beige;
+      }
+        img{
+            width: 1330px;
+        }
+        header{
+            background-color: rgb(255, 94, 0);
+            position: relative;
+            height: 50px;
+            
+        }
+        .yu{
+            float: right;
+            margin-top: -58px;
+            padding-top: 15px;
+            padding-right: 20px;
+            background-color: rgb(255, 94, 0);
+            height: 34px;
+        }
+        .a{
+            padding-right: 20px;
+            text-decoration: none;
+            color: black;
+            font-weight: bolder;
+        }
+       h1{
+            text-align: left;
+            color: black;
+        }
+		p{
+      
+			font-size: 25px;
+			font-weight: lighter;
+			width: 900px;
+			margin-top: 50px;
+			position: absolute;
+		}
+		form{
+			margin-top: 350px;
+			margin-left: 350px;
+			font-size: 20px;
+      }
+		.announcement-container {
+  position: absolute;
+  box-shadow: 3px 3px 8px black;
+  top: 360px;
+  right: 30px;
+  height: 280px;
+  width: 400px;
+  background-color: azure;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+.announcement {
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.announcement span {
+  white-space: nowrap;
+  animation: marquee 1s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+h2{
+	float: right;
+	color: black;
+	background-color: red;
+	border: 2px solid black;
+  top: 140px;
+  margin-left: 1000px;
+  margin-right: 22px;
+  text-align: center;
+  text-decoration: underline;
+  height: 80px;
+  width: 400px;
+  
+  
+}
+.blink {
+  animation: blinker 1s linear infinite;
+  background-color: blue;
+  width: 150px;
+  height: 60px;
+  text-transform: uppercase;
+  font-size: 15px;
+  border-radius: 1000px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+.blink:hover{
+	animation: none;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+#q{
+	color: black;
+	font-size: 20px;
+	text-decoration: none;
+	font-weight: bolder;
+}
+.scrolling-text{
+  background-color: black;
+  height: 30px;
+  cursor: not-allowed;
+}
+#zx{
+  text-decoration: none;
+  color: papayawhip;
+  font-weight: 600;
+  margin-left: 200px;
+}
+.slideshow {
+  margin-top: 40px;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slideshow img:first-child {
+  opacity: 1;
+}
+
+.slideshow img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slideshow img.previous {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slideshow img.next {
+  opacity: 1;
+  z-index: 0;
+}
+
+.slideshow img.active, .slideshow img.previous, .slideshow img.next {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slideshow img.previous {
+  animation: slide-out-previous 1s ease-in-out;
+}
+
+.slideshow img.active {
+  animation: slide-in 1s ease-in-out;
+}
+
+.slideshow img.next {
+  animation: slide-out-next 1s ease-in-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out-previous {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-out-next {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+.foot{
+  position: relative;
+  margin-top: 30px;
+  float: left;
+  height: 300px;
+  background-color: black;
+  width: 100%;
+  color: white;
+}
+li{
+  float: left;
+  margin-left: 130px;
+  font-size: 20px;
+  list-style: none;
+}
+h4{
+  font-size: 30px;
+  text-decoration: underline;
+  
+}
+.footere{
+ 
+  margin-top: 282px;
+  
+}
+.footer{
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  background-color: black;
+  width: 1333px;
+}
+button.blink {
+  position: relative;
+}
+
+button.blink::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: translateY(-50%);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid #333;
+}
+
+button.blink:hover::after {
+  right: -25px;
+}
+
+
+
+
+
+
+
+
+
+
+		
+
+
+	</style>
+   
+	<body>
+		<header>
+        
+            <h1>WELLCOME to , AR UNIVERSITY .... !!</h1>
+            <ul class="yu">
+            <a href="a.html" id="z" class="a">HOME</a>
+            <a href="b.html" class="a">CONTACT US</a>
+            <a href="c.html" class="a">EMAIL</a>
+            </ul>
+        
+    </header>
+    <marquee  onmouseover="this.stop();" onmouseout="this.start();" class="scrolling-text">
+      <a href="a.html" id="zx">Best Offers</a>
+      <a href="a.html" id="zx">Results</a>
+      <a href="a.html" id="zx">Fees</a>
+      <a href="a.html" id="zx">Course</a>
+    </marquee>
+
+    
+
+	<p>You're interested in applying for admission to our university, we welcome your application! Our admissions process is designed to be straightforward and easy to navigate, and we're here to support you every step of the way.
+
+		At our university, we pride ourselves on our commitment to academic excellence, as well as our dedication to fostering a supportive and inclusive community. We believe that our diverse student body is one of our greatest strengths, and we look forward to welcoming students from all backgrounds and walks of life.
+		
+		To learn more about our admissions requirements and process, please visit our website or contact our admissions office. We're happy to answer any questions you may have, and we look forward to receiving your application!</p>
+		<h2>ANNOUNCEMENT</h2>
+		<div class="announcement-container">
+			<marquee behavior="scroll" direction="up">
+				
+			  <span class="announcement">We are excited to announce that the admission process for our prestigious university is now open! We invite all interested and eligible candidates to apply for the upcoming academic year.<br><br>
+
+				Our university offers a wide range of undergraduate and graduate programs across various disciplines, including business, engineering, sciences, arts, and humanities. <br><br>With a world-class faculty, state-of-the-art facilities, and a vibrant campus community, we provide an unparalleled learning experience that prepares our graduates for success in their chosen fields.
+				
+				To apply for admission, please visit our website and complete the online application form. <br><br>We require applicants to submit their academic transcripts, standardized test scores, personal statement, and letters of recommendation. Our admission committee carefully evaluates each application to select the most talented and promising candidates.</span>
+			</marquee>
+		  </div>
+		  
+		  
+		<form action="/index">
+		<label>for PG  ADMISSION  ===> </label>
+
+		
+		<button  class="blink" type="submit">Click Here..!</button>
+	</form>
+  <div class="slideshow">
+    <img class="active" src="{{url_for('static',filename='uni2.jpg')}}">
+    <img src="{{url_for('static',filename='uni3.jpg')}}">
+    <img src="{{url_for('static',filename='uni4.jpg')}}">
+  </div>
+  <div class="foot">
+    <ul class="foo">
+      <li><h4>Address :</h4><br>Dubai Main Road , Kadayanallur ,<br> 627751 , <br>Tamil Nadu , India .</li>
+      <li><h4>EMAIL :</h4><br> ar1222universityinfo@mail.com</li>
+      <li><h4>Help - Toll Free :</h4><br> 1-8000-3002-8989 </li>
+    </ul>
+    </div>
+    <div class="footere">
+      <p class="footer">This website is maintained by Centre for Computing A.R University<br>
+        © AR University. 2023. All Rights Reserved.</p>
+      </div>
+  
+  
+
+	</body>
+  <script>
+    var images = document.querySelectorAll(".slideshow img");
+    var index = 0;
+    setInterval(function() {
+      images[index].classList.remove("active");
+      index++;
+      if (index === images.length) {
+        index = 0;
+      }
+      images[index].classList.add("active");
+    }, 3000);
+  </script>
+	</head>
+</html>
+		
+    
